@@ -1,5 +1,5 @@
 {
-    "dojoUrl": "http://securecodingdojo.onrender.com",
+    "dojoUrl": "https://securecodingdojo.onrender.com",
     "moduleUrls": {
         "blackBelt": "http://localhost:8080",
         "securityCodeReviewMaster": "https://owasp.org/SecureCodingDojo/codereview101/?fromPortal"
