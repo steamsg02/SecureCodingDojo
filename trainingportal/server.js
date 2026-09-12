@@ -598,7 +598,7 @@ app.get('/api/report/:moduleId',  async (req, res) => {
   }
   var reportUsers = req.user.reportUsers;
   var requiredModule = req.params.moduleId;
-  
+  m
   reportUsers = await report.getReportForModuleId(reportUsers,requiredModule);
 
   res.send(reportUsers);
@@ -610,8 +610,18 @@ process.on('SIGINT', function() {
   process.exit();
 });
 
+/*
 app.listen(8081,function(){
     util.log('Listening on 8081');
     util.log('Configured url:'+config.dojoUrl);
     util.log('Is secure:'+config.dojoUrl.startsWith("https")); 
+});
+*/
+
+const PORT = process.env.PORT || 8081;
+
+app.listen(PORT, '0.0.0.0', function(){
+    util.log('Listening on ' + PORT);
+    util.log('Configured url:' + config.dojoUrl);
+    util.log('Is secure:' + config.dojoUrl.startsWith("https"));
 });
