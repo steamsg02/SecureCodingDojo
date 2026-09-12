@@ -15,7 +15,7 @@ ADD sql /home/node/app/sql/
 
 COPY *.js /home/node/app/
 COPY package.json /home/node/app/
-COPY config.json.render /home/node/app/config.json
+COPY config.json.docker /home/node/app/config.json
 
 WORKDIR /home/node/app
 
